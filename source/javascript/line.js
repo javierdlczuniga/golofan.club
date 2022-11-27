@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@<version>/build/three.module.js';
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
