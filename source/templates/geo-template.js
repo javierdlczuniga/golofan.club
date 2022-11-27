@@ -9,27 +9,16 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 // append <canvas> to <body>
-const body = document.querySelector("body");
+const body = document.querySelector("body"); // TODO: change selector
 body.appendChild(renderer.domElement)
 
 // create a geometry figure and material to be covered by
-const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-const material = new THREE.MeshBasicMaterial( { color: 0xf4c2c2 } );
+const geometry = new THREE.BoxGeometry( 1, 1, 1 ); // TODO: change geometry
+const material = new THREE.MeshBasicMaterial( { color: 0xf4c2c2 } ); // TODO: change material
 
-// mesh geometry and material together
-const cube = new THREE.Mesh( geometry, material );
-
-// add cube to scene <canvas>
-scene.add( cube );
-
-camera.position.z = 5;
-
+// game loop
 function animate() {
     requestAnimationFrame( animate );
-
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-
     renderer.render( scene, camera );
 };
 
